@@ -1,0 +1,55 @@
+.questions {
+    height: 100%;
+    background-color: $color-Orange;
+    padding-bottom: 9.2rem;
+    padding-top: 9rem;
+}
+
+.questions__title__text {
+    @extend %title-128;
+    font-family: "Helvetica Neue Medium";
+    margin-left: 4rem;
+    width: 37rem;
+    text-align: center;
+    margin-bottom: 7.6rem;
+}
+
+.questions__content {
+    height: 41.4rem;
+}
+
+.questions__content__wrapper {
+    .questions__question:last-child {
+        border-bottom: 1px solid $color-white;
+    }
+}
+
+.questions__question {
+    height: 6.8rem;
+    border-top: 1px solid $color-white;
+    @extend %center;
+    flex-direction: column;
+    padding: 0 4rem;
+    gap: 2.5rem;
+
+    @include media("<phone") {
+        padding: 0 1rem;
+    }
+}
+
+.questions__question__text {
+    @extend %description-24;
+    width: 100%;
+    @include flex(space-between, center, _, _);
+}
+
+.questions__question__icon {
+    border: 1px solid rgb(16, 241, 31);
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.questions__question__answer {
+    @extend %description-24;
+    display: none;
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Arthur Cole",
+        "role": "Head of Operations",
+        "image": "Arthur.jpg"
+    },
+    {
+        "name": "Henry Arthur",
+        "role": "General Manager",
+        "image": "Henry.jpg"
+    },
+    {
+        "name": "Louise Marvin",
+        "role": "CEO",
+        "image": "Louise.jpg"
+    },
+    {
+        "name": "Bode Akinwunmi",
+        "role": "Social Media manager",
+        "image": "Bode.jpg"
+    },
+    {
+        "name": "Nguyen Shane",
+        "role": "Photographer",
+        "image": "Nguyen.jpg"
+    }
+]

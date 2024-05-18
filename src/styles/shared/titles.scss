@@ -1,0 +1,39 @@
+@import "../utils/responsive";
+
+%title-40 {
+    font-size: 4rem;
+    font-weight: medium;
+    font-family: "Helvetica Neue Medium";
+}
+%title-80 {
+    font-size: 8rem;
+    font-family: "Helvetica Neue Light";
+    font-weight: 800;
+}
+
+%title-120 {
+    font-size: 12rem;
+    font-family: "Helvetica Neue Medium";
+    text-align: center;
+    font-weight: 500;
+    @include media("<phone") {
+        font-size: 10rem;
+    }
+}
+
+%title-252 {
+    font-size: 20rem;
+    font-family: "Helvetica Neue light";
+    font-weight: 400;
+    text-align: center;
+    @include media("<phone") {
+        font-size: 12rem;
+    }
+}
+
+%title-128 {
+    font-size: 12.8rem;
+    @include media("<phone") {
+        font-size: 10rem;
+    }
+}

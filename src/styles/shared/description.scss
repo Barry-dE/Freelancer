@@ -1,0 +1,35 @@
+@import "../utils/responsive";
+
+%description-12 {
+    font-size: 1.2rem;
+    font-family: "Helvetica Neue Regular";
+}
+
+%description-16 {
+    font-size: 1.6rem;
+    font-family: "Helvetica Neue Medium";
+}
+
+%description-18 {
+    font-size: 1.8rem;
+    font-family: "Helvetica Neue Medium";
+}
+
+%description-20 {
+    font-size: 2rem;
+    font-family: "Helvetica Neue Regular";
+    font-weight: 400;
+}
+
+%description-24 {
+    font-size: 2.4rem;
+    font-family: "Helvetica Neue Light";
+    line-height: 1.3;
+}
+
+%description-36 {
+    font-size: 3.6rem;
+    @include media("<phone") {
+        font-size: 2.5rem;
+    }
+}

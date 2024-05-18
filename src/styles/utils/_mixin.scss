@@ -1,0 +1,21 @@
+%cover {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex($jc, $ai, $fd, $gap) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    gap: $gap;
+}

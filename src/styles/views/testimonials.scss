@@ -1,0 +1,95 @@
+.testimonial {
+    width: 100%;
+    height: 76.8rem;
+    background-color: black;
+    @include media("<phone") {
+        height: 50rem;
+    }
+}
+
+.testimonial__wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.testimonial__slides {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    place-items: center;
+}
+
+.testimonial__slide {
+    width: 100%;
+    height: 100%;
+    grid-area: 1/1/-1/-1;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
+    display: grid;
+    place-items: center;
+    will-change: transform, opacity;
+}
+
+.testimonial__slide--current {
+    pointer-events: none;
+    opacity: 1;
+}
+
+.testimonial__slide__media__image {
+    @extend %cover;
+    object-fit: cover;
+    will-change: transform, opacity, filter;
+    filter: brightness(0.5);
+}
+
+.testimonial__text {
+    @include flex(_, _, column, 3.2rem);
+    position: absolute;
+    left: 4rem;
+    bottom: 8rem;
+    z-index: 1;
+    height: 20.8rem;
+    width: 68rem;
+    @include media("<phone") {
+        max-width: 50rem;
+        bottom: 0;
+    }
+    & > :first-child {
+        @extend %description-36;
+        font-weight: 300;
+        font-family: "Helvetica Neue Light";
+    }
+
+    & > :last-child {
+        @extend %description-36;
+        font-family: "Helvetica Neue Medium";
+        font-weight: 500;
+    }
+}
+
+.testimonial__slides__navigation {
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+    z-index: 2;
+    bottom: 4rem;
+    right: 8rem;
+}
+
+.testimonial__slides__navigation__item {
+    aspect-ratio: 1;
+    font-size: 5rem;
+    place-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.testimonial__slides__navigation__item:hover {
+    color: #ccc;
+}

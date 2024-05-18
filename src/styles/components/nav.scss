@@ -1,0 +1,59 @@
+.header {
+    background-color: transparent;
+    height: 6rem;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.navigation {
+    height: 100%;
+    width: 100%;
+    margin-top: 1.7rem;
+    @include flex(space-between, center, _, 1.2rem);
+    padding: 0 4rem;
+}
+
+.navigation__logo {
+    max-width: 26.53rem;
+    height: 100%;
+    @include flex(_, center, _, 1.2rem);
+}
+
+.navigation__logo__svg {
+    figure {
+        img {
+            width: 2.9rem;
+        }
+    }
+}
+
+.navigation__text {
+    @extend %description-16;
+}
+
+.nav__Links {
+    width: 29.7rem;
+    @extend %description-16;
+    font-family: "Helvetica Neue Medium";
+    ul {
+        @include flex(space-between, center, _, _);
+    }
+
+    @include media("<phone") {
+        display: none;
+    }
+}
+
+.nav__contact__button {
+    button {
+        height: 4.2rem;
+        width: 12.3rem;
+        @extend %description-18;
+        background-color: $color-Orange;
+        border-radius: 0.7rem;
+    }
+
+    display: none;
+}

@@ -1,0 +1,30 @@
+.preloader {
+    @extend %cover;
+    z-index: z("preloader");
+    background-color: $color-chinese-black;
+    position: fixed;
+    display: none;
+}
+
+.preloader__wrapper {
+    width: 100%;
+    height: 100%;
+    @extend %center;
+}
+
+.preloader__content {
+    width: 23.9rem;
+    @extend %center;
+    gap: 1.6rem;
+}
+
+.preloader__logo {
+    &__image {
+        height: 3.5rem;
+        width: 4.2rem;
+    }
+}
+
+.preloader__text {
+    @extend %title-40;
+}

@@ -1,0 +1,91 @@
+.about {
+    height: 100%;
+    width: 100%;
+    background-color: $color-Albescent-White;
+
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+
+.about__title {
+    margin: 0 auto;
+    height: 44rem;
+    max-width: 120rem;
+    @include flex(space-between, _, _, _);
+    margin-bottom: 7rem;
+    @include media("<phone") {
+        @include flex(_, _, column, 5rem);
+        padding: 3rem;
+        margin-bottom: 14rem;
+    }
+
+    &__title {
+        color: $color-team-text;
+        @extend %title-128;
+        width: 65.2rem;
+        font-family: "Helvetica Neue Medium";
+        font-weight: 300;
+        line-height: 0.88;
+    }
+
+    &__description {
+        align-self: flex-start;
+        color: $color-team-desc;
+        @extend %description-16;
+        max-width: 36.4rem;
+        font-family: "Helvetica Neue Regular";
+        font-weight: 900;
+
+        @include media("<phone") {
+            font-family: "Helvetica Neue medium";
+            align-self: flex-end;
+        }
+    }
+}
+
+.about__grid__marquee {
+    gap: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__grid__marquee__wrapper {
+    gap: 1.6rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+}
+
+.about__grid__marquee__items {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 1.6rem;
+    animation: scroll 14s linear infinite;
+}
+
+.about__grid__marquee__Item {
+    width: 41.6rem;
+    height: 34rem;
+    position: relative;
+    figure {
+        img {
+            @extend %cover;
+            object-fit: cover;
+        }
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 1.6rem));
+    }
+}

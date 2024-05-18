@@ -1,0 +1,201 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    outline: none;
+    -webkit-touch-callout: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+html {
+    @extend %cover;
+    font-size: calc(100vw / 1280 * 9);
+    overscroll-behavior: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    @include media("<phone") {
+        font-size: calc(100vw / 768 * 10);
+    }
+}
+
+body {
+    font-family: "Helvetica Neue Regular" sans-serif;
+    font-weight: 400;
+    @extend %cover;
+    background: $color-white;
+    color: $color-white;
+}
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+a {
+    color: inherit;
+    outline: none;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    border-radius: none;
+    color: inherit;
+    font: inherit;
+    outline: none;
+    pointer-events: auto;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+input,
+textarea {
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    pointer-events: auto;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+[data-animation="header"],
+[data-animation="paragraph"] {
+    span span {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+    }
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Optionally, you can also hide scrollbar in Firefox */
+/* Firefox */
+* {
+    scrollbar-width: none;
+}
+
+h1 {
+    display: block;
+}
