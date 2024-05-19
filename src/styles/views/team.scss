@@ -1,9 +1,10 @@
 .team {
     height: auto;
     width: 100%;
+    overflow: hidden;
     background-color: $color-Albescent-White;
     @include media("<phone") {
-        height: 90vh;
+        height: 80vh;
     }
 }
 
@@ -11,6 +12,7 @@
     height: 100%;
     padding-top: 10rem;
     padding-bottom: 5.1rem;
+    position: relative;
 }
 
 .team__text__title {
@@ -33,6 +35,10 @@
     display: flex;
     gap: 2.4rem;
     overflow: hidden;
+    @include media("<phone") {
+        position: absolute;
+        bottom: 20rem;
+    }
 }
 
 .team__gallery__media__wrapper {

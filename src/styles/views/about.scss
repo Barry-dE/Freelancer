@@ -46,6 +46,8 @@
         @include media("<phone") {
             font-family: "Helvetica Neue medium";
             align-self: flex-end;
+            margin-top: 10rem;
+            line-height: 2rem;
         }
     }
 }
@@ -61,6 +63,9 @@
     display: flex;
     overflow: hidden;
     user-select: none;
+    @include media("<phone") {
+        margin-top: 25rem;
+    }
 }
 
 .about__grid__marquee__items {
