@@ -2,6 +2,9 @@
     height: 100%;
     width: 100%;
     background-color: $color-Albescent-White;
+    @include media("<phone") {
+        height: 100vh;
+    }
 
     &__wrapper {
         height: 100%;

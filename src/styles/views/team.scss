@@ -2,6 +2,9 @@
     height: auto;
     width: 100%;
     background-color: $color-Albescent-White;
+    @include media("<phone") {
+        height: 90vh;
+    }
 }
 
 .team__wrapper {

@@ -5,6 +5,9 @@
     position: absolute;
     z-index: 1;
     top: 0;
+    @include media("<phone") {
+        top: 4rem;
+    }
 }
 
 .navigation {
@@ -25,12 +28,16 @@
     figure {
         img {
             width: 2.9rem;
+            @include media("<phone") {
+                width: 5rem;
+            }
         }
     }
 }
 
 .navigation__text {
     @extend %description-16;
+    font-size: 4rem;
 }
 
 .nav__Links {
